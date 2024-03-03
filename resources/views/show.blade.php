@@ -34,7 +34,13 @@
 
         <div class="flex justify-between p-4">
             <div class="flex items-center space-x-2">
-            <img class="w-10 rounded-full" src="https://source.unsplash.com/100x100/?portrait?5" alt="sara" />
+                @if ($blog->sex =='Female')
+                <img class="w-10 rounded-full" src="https://cdn.discordapp.com/attachments/833096639332876339/1213855113014157422/a975934bb378afc4ca8c133df451f56e.jpg?ex=65f6fdab&is=65e488ab&hm=fa80e509653428620bc3900546a4501874257ff31da32b0b721786f3a38370b6&" alt="sara" />
+            @else
+                <img class="w-10 rounded-full" src="https://cdn.discordapp.com/attachments/833096639332876339/1213854988208709652/bd428e6bb156d90045700dbf3e967c3e.jpg?ex=65f6fd8d&is=65e4888d&hm=927ff0ea283b52ebb01651931cfc12a360644e16241bade3bd0c10679b01b92e&" alt="sara" />
+            @endif
+
+
             <h2 class="font-bold text-gray-800 cursor-pointer">{{ $blog->name }}</h2>
             </div>
             @endforeach
