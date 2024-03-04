@@ -26,7 +26,7 @@
                         <a class=" hover:text-gray-500" href="blog">กลับสู่หน้าแสดงแบบสอบถามของผู้ใช้</a>
                     </li>
                     <li>
-                        <a class="hover:text-gray-500" href="/admin/home">กลับสู่หน้าแสดงแบบสอบถามของแอดมิน</a>
+                        <a class="hover:text-gray-500" href="/admin/login">กลับสู่หน้าแสดงแบบสอบถามของแอดมิน</a>
                     </li>
                 </ul>
             </div>

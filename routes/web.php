@@ -41,7 +41,7 @@ Route::get('/delete/{id}',[BlogController::class,'delete'])->name('delete');
 Route::post('/insert',[BlogController::class,'insert']);
 Route::get('/show',[PostController::class,'show']);
 
-Route::get('/shows',[BlogController::class,'shows']);
+Route::middleware('auth:sanctum')->get('/shows',[BlogController::class,'shows']);
 
 
 
