@@ -28,8 +28,7 @@ class BlogController extends Controller
 
     public function about()
     {
-        $name ="ต้าต้าร์";
-        $date="12 กุมภาพันธ์ 2567";
+
         return view('about',compact('name','date'));
 
 
@@ -79,16 +78,7 @@ class BlogController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    // public function change($id)
-    // {
-    //    $blog=DB::table('blogs')->where('id',$id)->first();
-    //    $data=[
-    //         'status'=>!$blog->status
-    //    ];
 
-    //    DB::table('blogs')->where('id',$id)->update($data);
-    //    return redirect('/blog');
-    // }
 
     /**
      * Display the specified resource.
