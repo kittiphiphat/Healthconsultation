@@ -30,26 +30,26 @@
             <div class="mb-3">
             <div class="flex">
                 <label for="name" class="block mb-2 text-sm font-bold text-gray-700"></label>
-                <div class="flex-grow w-1/4 pr-2"><input  type="name" id="name" name="name" placeholder="ชื่อ-นามสกุล" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" value="{{$blogs->name}}"></div>
+                <div class="flex-grow w-1/4 px-2 pr-2">{{$blogs->name}}</div>
                 <label for="email" class="block mb-2 text-sm font-bold text-gray-700"></label>
-                    <div class="flex-grow"><input type="email" id="email" name="email" placeholder="อีเมล" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" value="{{$blogs->email}}"></div>
+                    <div class="flex-grow">{{$blogs->email}}</div>
 
                 </div>
             </div>
           <div class="mb-3">
                 <div class="flex">
                 <label for="sex" class="block mb-2 text-sm font-bold text-gray-700"></label>
-                <div class="flex-grow w-1/4 pr-2"><input  type="sex" id="sex" name="sex" placeholder="เพศ" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" value="{{$blogs->sex}}"></div>
+                <div class="flex-grow w-1/4 px-2 pr-3">{{$blogs->sex}}</div>
                 <label for="age" class="block mb-2 text-sm font-bold text-gray-700"></label>
-                    <div class="flex-grow"><input type="age" id="age" name="age" placeholder="อายุ" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" value="{{$blogs->age}}"></div>
+                    <div class="flex-grow w-1/4 px-2 pr-3">{{$blogs->age}}</div>
 
                 </div>
                 <div class="py-1 mb-3">
                     <div class="flex py-2">
                         <label for="sex" class="block mb-2 text-sm font-bold text-gray-700"></label>
-                        <div class="flex-grow w-1/4 pr-2"><input  type="phone" id="phone" name="phone" placeholder="เบอร์ติดต่อ" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" value="{{$blogs->phone}}"></div>
+                        <div class="flex-grow w-1/4 px-2 pr-2">{{$blogs->phone}}</div>
                         <label for="age" class="block mb-2 text-sm font-bold text-gray-700"></label>
-                            <div class="flex-grow"><input type="section" id="section" name="section" placeholder="ชื่อเรื่องที่ต้องการปรึกษา" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" value="{{$blogs->section}}"></div>
+                            <div class="flex-grow w-1/4 px-2 pr-2">{{$blogs->section}}</div>
 
                         </div>
                   </div>
