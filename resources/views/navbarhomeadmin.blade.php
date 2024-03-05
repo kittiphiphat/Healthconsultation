@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.1.0/remixicon.css" integrity="sha512-dUOcWaHA4sUKJgO7lxAQ0ugZiWjiDraYNeNJeRKGOIpEq4vroj1DpKcS3jP0K4Js4v6bXk31AAxAxaYt3Oi9xw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="font-[Kanit] bg-gradient-to-t from-[#fbc2eb] to-[#a6c1ee] h-screen">
+<body class="font-[Kanit]  h-screen">
     <header class="bg-white ">
         <nav class="flex justify-between items-center w-[90%]  mx-auto">
             <div>
@@ -48,7 +48,7 @@
             </div>
     </header>
 
-    <div class="px-2 mx-auto ">
+    <div class="px-2 mx-auto bg-gradient-to-t from-[#72b2e4] to-[#92e1e2]">
                 @yield('content')
         </div>
 

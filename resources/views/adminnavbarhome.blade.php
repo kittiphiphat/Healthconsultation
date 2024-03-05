@@ -39,8 +39,10 @@
 
 
 
-                <a href="/admin/login"><button class="bg-gradient-to-t from-[#72b2e4] to-[#92e1e2] text-white px-5 py-2 rounded-full hover:bg-[#87acec] font-[Kanit]">ออกระบบ</button></a>
-
+                <form method="POST" action="/admin/logout" x-data>
+                    @csrf
+                <a href="/admin/logout"><button class="bg-gradient-to-t from-[#72b2e4] to-[#92e1e2] text-white px-5 py-2 rounded-full hover:bg-[#87acec] font-[Kanit]">ออกจากระบบ</button></a>
+                </form>
                 {{-- <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon> --}}
                 <i onclick="onToggleMenu(this)" name="menu" class="text-3xl ri-menu-line md:hidden"></i>
             </div>
