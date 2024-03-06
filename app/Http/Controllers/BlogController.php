@@ -142,7 +142,7 @@ class BlogController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function delete($id)
+    public function destroy($id)
     {
        DB::table('blogs')->where('id',$id)->delete();
        return redirect('/blog');

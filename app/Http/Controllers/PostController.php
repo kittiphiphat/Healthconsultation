@@ -64,46 +64,43 @@ class PostController extends Controller
        DB::table('posts')->where('id',$id)->update($data);
        return redirect('/admin/home');
     }
-    public function update(Request $request,$id)
-
-
+    public function update(Request $request, $id)
     {
-
-
-
+        // Validate incoming data
         $request->validate([
-            'name'=>'required|max:50',
-            'email'=>'required',
-            'phone'=>'required',
-            'sex'=>'required',
-            'age'=>'required',
-            'section'=>'required|max:50',
-            'respond'=>'required'
 
-            ]);
+            'respond' => 'required'
+        ]);
 
+        // Prepare data for update
+        $data = [
 
-
-
-
-
-
-        $data =[
-            'name'=>$request->name,
-            'email'=>$request->email,
-            'sex'=>$request->sex,
-            'phone'=>$request->phone,
-            'age'=>$request->age,
-            'section'=>$request->section,
-            'respond'=>$request->respond,
-            'created_at'=>$request->created_at
+            'respond' => $request->respond
         ];
-        DB::table('posts')->where('id',$id)->update($data);
-        return redirect('/admin/home');
+
+        // Perform update operation
+        $updateResult = DB::table('posts')->where('id', $id)->update($data);
+
+        // Check if update was successful
+        if ($updateResult) {
+            // If update was successful, redirect
+            return redirect('/admin/home');
+        } else {
+            // If update failed, handle the error (e.g., return to a form with an error message)
+            // For simplicity, let's return to the same form with an error message
+            return back()->with('error', 'Failed to update the record.');
+        }
     }
+
     /**
      * Remove the specified resource from storage.
      */
+
+     public function destroy($id)
+     {
+        DB::table('posts')->where('id',$id)->delete();
+        return redirect('/admin/home');
+     }
     public function dashboard()
     {
         return view('adminwelcome');

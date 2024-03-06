@@ -65,8 +65,8 @@ Route::middleware('auth:sanctum')->delete('/logout/{user}', [UserController::cla
 
 
 Route::group(['prefix'=>'admin','middleware'=>['admin:admin']],function(){
-    Route::get('/login', [AdminController::class, 'loginForm']);
-    Route::post('/login', [AdminController::class, 'store'])->name('admin.login');
+    Route::get('/login', [AdminController::class, 'loginForm'])->name('admin.login');
+    Route::post('/login', [AdminController::class, 'store']);
 });
 
 
@@ -79,7 +79,7 @@ Route::controller(AdmininfoController::class)->group(function(){
     Route::get('/admin/delete/{id}',[PostController::class,'destroy'])->name('admin.delete');
     Route::get('/admin/logout','destroy')->name('admin.logout');
     Route::get('/admin/blog', [AdmininfoController::class, 'index'])->name('blogadmin');
-    Route::post('/admin/logout','destroy')->name('admin.logout');
+    Route::post('/admin/logout',[AdminController::class,'destroy'])->name('admin.logout');
     Route::get('/admin/edit/{id}', [PostController::class, 'edit'])->name('admin.edit');
     Route::get('/admin/delete/{id}',[PostController::class,'destroy'])->name('admin.delete');
     Route::post('/admin/update/{id}',[PostController::class,'update'])->name('admin.update');

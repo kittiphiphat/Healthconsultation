@@ -22,7 +22,8 @@
     <div class="max-w-3xl p-4 py-4 mx-auto bg-white rounded-md shadow-md mt-18">
         <h1 class="mb-2 text-xl font-semibold">แบบสอบถาม</h1>
 
-        <form method="POST" action="{{ route('admin.update', $blogs->id) }}">
+        <form method="POST" action="{{ route('admin.update', $blogs->id) }}" enctype="multipart/form-data">
+
 
 
             @csrf
@@ -67,9 +68,13 @@
 
 
 
-          <div class="mb-6 ">
+
+
+
+        </div>
+        <div class="py-2 mb-6">
             <button type="submit"
-                class="relative w-full flex justify-center items-center px-5 py-2.5 font-medium tracking-wide text-white capitalize   bg-black rounded-md hover:bg-gray-900  focus:outline-none   transition duration-300 transform active:scale-95 ease-in-out">
+                class="relative w-[40%] flex justify-center items-center px-5 mx-auto py-2.5 font-medium tracking-wide text-white capitalize   bg-black rounded-md hover:bg-gray-900  focus:outline-none   transition duration-300 transform active:scale-95 ease-in-out">
                 <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF">
                     <g>
                        <rect fill="none" height="24" width="24"></rect>
@@ -82,17 +87,13 @@
                  </svg>
                  <span class="pl-2 mx-2">อัพเดตแบบสอบถาม</span>
             </button><br>
-            <div class="mb-6 ">
-                <a href="/admin/home" class="w-full px-6 py-3 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
+            <div class="mb-6">
+                <a href="/admin/home" class="w-[40%] relative  flex justify-center items-center px-5 mx-auto py-2.5  text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
                     แบบสอบถามทั้งหมด</a>
                 </div>
 
-
-
-        </div>
-       </form>
       </div>
-
+ </form>
 
 @endsection
 
