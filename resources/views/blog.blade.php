@@ -15,7 +15,7 @@
         @section('content')
           @if (count($blogs)>0)
 
-            <section class="container max-w-screen-lg p-5 mx-auto font-[Kanit] ">
+            <section class="container max-w-screen-xl py-2 mx-auto font-[Kanit] bg-gradient-to-t from-[#72b2e4] to-[#92e1e2] ">
                 <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
                 <div class="w-full overflow-x-auto">
                     <table class="w-full">
